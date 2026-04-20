@@ -1,0 +1,224 @@
+@media screen and (max-width: 850px) {
+    body {
+        font-weight: lighter !important;
+    }
+
+    .compass {
+        width: 20px !important;
+    }
+
+    .threebtns img {
+        width: 20px !important;
+    }
+
+    .threebtns {
+        right: 1% !important;
+        bottom: 4% !important;
+    }
+
+    .card-container {
+        right: 12% !important;
+        top: 40% !important;
+        width: 45% !important;
+        padding: 7px !important;
+        border-radius: 19px !important;
+    }
+
+    #info-card {
+        bottom: 2% !important;
+        width: 35% !important;
+        padding: 10px !important;
+        z-index: 10 !important;
+        border-radius: 6px !important;
+    }
+
+    h1 {
+        font-size: 9px !important;
+        margin-bottom: 8px !important;
+        font-weight: 100 !important;
+        display: flex !important;
+        justify-content: center !important;
+    }
+
+    .orientation-buttons {
+        margin-bottom: 14px !important;
+    }
+
+    .orientation-buttons button {
+        font-size: 12px !important;
+    }
+
+    #corner-plots-button {
+        width: 39% !important;
+        font-size: 12px !important;
+    }
+
+    .slider-section {
+        width: 100% !important;
+        margin: 0px auto !important;
+    }
+
+    .slider-section h2 {
+        font-size: 13px !important;
+        margin: 7px 0px 0px 0px !important;
+        font-weight: 100 !important;
+        DISPLAY: flex !important;
+        justify-content: center !important;
+    }
+
+    .slider {
+        height: 1px !important;
+    }
+
+    .slider-section .slider-value {
+        font-size: 11px !important;
+    }
+
+    .amenities-section,
+    .availability-section {
+        font-size: 8px !important;
+    }
+
+    .amenities-section h2,
+    .availability-section h2 {
+        font-weight: 100 !important;
+        margin: 4px auto !important;
+        display: flex !important;
+        justify-content: center !important;
+        margin-top: auto !important;
+    }
+
+    .amenities-buttons button,
+    .availability-buttons button {
+        margin: 0px 4px 5px 1px !important;
+        font-size: 9px !important;
+        width: 30% !important;
+        padding: 5px !important;
+    }
+
+
+    #info-card {
+        bottom: 2% !important;
+        width: 25% !important;
+        padding: 10px !important;
+        z-index: 10 !important;
+    }
+
+    .card-body h4 {
+        font-size: 9px !important;
+        font-weight: 100 !important;
+        margin: 10px auto !important;
+    }
+
+    #compareModal h2 {
+        font-size: 10px !important;
+        font-weight: lighter !important;
+        bottom: 19% !important;
+    }
+
+    #plot-info strong {
+        padding: 1px 0px !important;
+        display: inline-block !important;
+        font-weight: 100 !important;
+        font-size: 8px !important;
+    }
+
+    #info-card #plot-info {
+        font-size: 12px !important;
+        padding: 1px 0px 0px 0px !important;
+    }
+
+    #addBtn img {
+        width: 25px !important;
+    }
+
+    #addBtn p {
+        font-size: 8px !important;
+    }
+
+    #view img,
+    .button img {
+        width: 29px !important;
+    }
+
+    .button p,
+    .buttons5 p {
+        font-size: 5px !important;
+        font-weight: 100 !important;
+        letter-spacing: 1px !important;
+    }
+
+    .button-container {
+        margin: 0px auto !important;
+    }
+
+    .plot-data-value {
+        font-size: 10px !important;
+    }
+
+    .compared-plot.card {
+        height: 89px !important;
+        font-size: 9px !important;
+        padding: 10px !important;
+    }
+
+    .fa-plus-circle {
+        font-size: 27px !important;
+        left: 24px !important;
+        top: 31px !important;
+    }
+
+    #compareModal {
+        top: 59% !important;
+        left: 56% !important;
+        width: 47% !important;
+        height: 38% !important;
+        padding: 16px !important;
+    }
+
+    .row-wrapper img {
+        display: none !important;
+    }
+
+    .compared-plot.card p {
+        margin: 3px auto !important;
+    }
+
+    .compared-plot button {
+        margin-top: 5px !important;
+        padding: 0px 7px !important;
+    }
+
+    .alert-content {
+        margin: 13% auto !important;
+        padding: 8px !important;
+        width: 36% !important;
+        top: 53% !important;
+        left: 30% !important;
+        font-size: 10px !important;
+        font-weight: lighter !important;
+    }
+
+    .tooltip-text {
+        display: none;
+    }
+
+    #minimize-btn {
+        width: 12% !important;
+        height: 8% !important;
+    }
+    #central-tooltip{
+        display: none;
+    }
+    .center-line{
+        display: none;
+    }
+    #polytooltip {
+        display: none;
+    }
+    #firsttooltip {
+        display: none !important;
+    }
+    
+
+}
