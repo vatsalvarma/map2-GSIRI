@@ -16,6 +16,14 @@
         bottom: 4% !important;
     }
 
+    .plot-panel {
+        right: 50%;
+        top: 50%;
+        transform: translate(50%, -50%);
+        /* center it */
+        width: 90vw;
+    }
+
     .card-container {
         right: 12% !important;
         top: 40% !important;
@@ -207,18 +215,194 @@
         width: 12% !important;
         height: 8% !important;
     }
-    #central-tooltip{
+
+    #central-tooltip {
         display: none;
     }
-    .center-line{
+
+    .center-line {
         display: none;
     }
+
     #polytooltip {
         display: none;
     }
+
     #firsttooltip {
         display: none !important;
     }
-    
 
+
+}
+
+/* ============================================================ */
+/* MOBILE OPTIMIZATION (BASED ON SKETCH) */
+/* Stack: Plot Details -> Map -> Buttons */
+/* ============================================================ */
+@media screen and (max-width: 600px) {
+    .firsttop {
+        display: flex !important;
+        flex-direction: column !important;
+        height: 100vh !important;
+        overflow-y: auto !important;
+        position: relative !important;
+        width: 100vw !important;
+        background: #D5CFD1 !important;
+    }
+
+    /* 1. PLOT DETAILS AT TOP */
+    #plot-info-panel,
+    .plot-info-panel {
+        order: 1 !important;
+        position: relative !important;
+        width: 100% !important;
+        top: 0 !important;
+        right: 0 !important;
+        left: 0 !important;
+        bottom: auto !important;
+        padding: 20px !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        display: block !important;
+        margin: 0 !important;
+        border-bottom: 1px solid #eee !important;
+    }
+
+    .panel-header h3 {
+        font-size: 18px !important;
+        margin-bottom: 20px !important;
+        color: #5b5a2f !important;
+        border-bottom: 2px solid #5b5a2f !important;
+        padding-bottom: 5px !important;
+        display: inline-block !important;
+    }
+
+    .panel-row {
+        margin-bottom: 15px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+    }
+
+    .panel-row .label {
+        font-size: 13px !important;
+        letter-spacing: 1.5px !important;
+        color: #5b5a2f !important;
+        min-width: 120px !important;
+    }
+
+    .panel-row .value {
+        font-size: 15px !important;
+        font-weight: bold !important;
+        color: #5b5a2f !important;
+        text-align: right !important;
+    }
+
+    .panel-row .line {
+        flex: 1 !important;
+        height: 1px !important;
+        background: #5b5a2f !important;
+        margin: 0 15px !important;
+        opacity: 0.2 !important;
+        display: block !important;
+    }
+
+    /* Plot Diagram (N, S, W, E) */
+    .plot-diagram {
+        position: relative !important;
+        left: auto !important;
+        top: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        margin: 40px auto 20px auto !important;
+        width: 80px !important;
+        height: 80px !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .plot-box {
+        width: 60px !important;
+        height: 60px !important;
+        border: 2px solid #5b5a2f !important;
+        background: #fff !important;
+    }
+
+    .plot-label {
+        font-size: 12px !important;
+        color: #5b5a2f !important;
+        white-space: nowrap !important;
+    }
+
+    .north {
+        top: -30px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+    }
+
+    .south {
+        bottom: -30px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+    }
+
+    .west {
+        left: -50px !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+    }
+
+    .east {
+        right: -50px !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+    }
+
+    /* 2. MAP (VIRTUAL LAYOUT) BELOW DETAILS */
+    .image-container {
+        order: 2 !important;
+        position: relative !important;
+        width: 100% !important;
+        height: 50vh !important;
+        background-color: #f0f0f0 !important;
+        margin-bottom: 20px !important;
+    }
+
+    #layout-image {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: contain !important;
+    }
+
+    #svg-map {
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    /* Vertical "VIRTUAL LAYOUT" label */
+
+
+    /* 3. BUTTONS AT BOTTOM */
+    .filter-btn,
+    .view-compare-btn,
+    .compare-btn {
+        position: relative !important;
+        bottom: auto !important;
+        right: auto !important;
+        left: auto !important;
+        width: 85% !important;
+        margin: 10px auto !important;
+        display: block !important;
+        order: 3 !important;
+        padding: 15px !important;
+        text-align: center !important;
+        border-radius: 12px !important;
+        font-size: 15px !important;
+        font-weight: 600 !important;
+    }
+
+    #mobile-info-slot {
+        display: none !important;
+    }
 }
