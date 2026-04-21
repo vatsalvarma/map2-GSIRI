@@ -863,14 +863,14 @@ button:focus {
 new card code */
 .plot-panel {
   position: fixed;
-  right: 10%;
-  top: 30%;
-  width: 380px;
+  right: 5%;
+  top: 20%;
+  width: min(90vw, 380px); /* responsive width */
+  max-width: 100%;
   font-family: "Century Gothic", sans-serif;
   color: #5b5f2a;
   display: none;
 }
-
 .panel-header {
   display: flex;
   justify-content: space-between;
