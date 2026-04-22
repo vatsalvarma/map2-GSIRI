@@ -484,9 +484,7 @@
     .firsttop {
         display: flex !important;
         flex-direction: column !important;
-         min-height: 100dvh;   /* modern iOS fix */
-    min-height: 100svh;   /* fallback */
-    min-height: -webkit-fill-available; /* older iOS */
+         min-height: 100vh;   /* modern iOS fix */
     height: auto;
         overflow-y: auto !important;
         position: relative !important;
