@@ -187,7 +187,13 @@ function updatePlotInfoPanel(plotData) {
   plotNumberEls.forEach((el) => (el.innerText = plotData.data.plotNumber || "—"));
   areaEls.forEach((el) => (el.innerText = plotData.data.area || "—"));
   facingEls.forEach((el) => (el.innerText = plotData.data.facing?.toUpperCase() || "—"));
-  typeEls.forEach((el) => (el.innerText = plotData.data.type?.toUpperCase() || "—"));
+  typeEls.forEach((el) => {
+    let type = plotData.data.type?.toUpperCase() || "";
+    if (type && !type.includes("PLOT")) {
+      type += " PLOT";
+    }
+    el.innerText = type || "—";
+  });
 
   sizesContainers.forEach((container) => {
     // We'll reuse the renderPlotSizes logic but update specific containers
@@ -202,27 +208,41 @@ function renderPlotSizesInContainer(sizesStr, container) {
     return;
   }
 
-  const parts = sizesStr.split("x").map((s) => s.trim());
-  if (parts.length < 2) {
-    container.innerText = sizesStr;
-    return;
+  // Handle 'x', ',', and spaces as separators
+  let parts = sizesStr.split(/[x,\s]+/).map((s) => s.trim()).filter(s => s !== "");
+
+  // Detect orientation labels (N-, S-, E-, W-)
+  let n = "—", s = "—", e = "—", w = "—";
+  parts.forEach(p => {
+    if (/^N-/i.test(p)) n = p.replace(/^N-/i, "");
+    else if (/^S-/i.test(p)) s = p.replace(/^S-/i, "");
+    else if (/^E-/i.test(p)) e = p.replace(/^E-/i, "");
+    else if (/^W-/i.test(p)) w = p.replace(/^W-/i, "");
+  });
+
+  // Fallback if no labels were found
+  if (n === "—" && s === "—" && e === "—" && w === "—") {
+    if (parts.length >= 4) {
+      n = parts[0]; s = parts[1]; e = parts[2]; w = parts[3];
+    } else if (parts.length >= 2) {
+      n = parts[0]; s = parts[0]; e = parts[1]; w = parts[1];
+    } else {
+      n = parts[0]; s = parts[0]; e = parts[0]; w = parts[0];
+    }
   }
 
-  const north = parts[0];
-  const south = parts[0];
-  const west = parts[1];
-  const east = parts[1];
-
+  // ALWAYS create the plot-box HTML
   container.innerHTML = `
     <div class="plot-box">
-      <span class="plot-label north">N-${north}</span>
-      <span class="plot-label south">S-${south}</span>
-      <span class="plot-label west">W-${west}</span>
-      <span class="plot-label east">E-${east}</span>
-      <div class="labell">PLOT AREA</div>
+      <span class="plot-label north">N-${n}</span>
+      <span class="plot-label south">S-${s}</span>
+      <span class="plot-label west">W-${w}</span>
+      <span class="plot-label east">E-${e}</span>
+      <div class="labell"></div>
     </div>
   `;
 }
+
 
 /*************************************************
  * COMPARE BUTTON
