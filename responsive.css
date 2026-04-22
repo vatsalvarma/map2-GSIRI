@@ -484,7 +484,7 @@
     .firsttop {
         display: flex !important;
         flex-direction: column !important;
-        height: 100dvh !important;
+         min-height: -webkit-fill-available;
         overflow-y: auto !important;
         position: relative !important;
         width: 100vw !important;
