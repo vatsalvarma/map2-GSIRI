@@ -572,7 +572,7 @@
         width: 60px !important;
         height: 60px !important;
         border: 2px solid #5b5a2f !important;
-        background: #fff !important;
+        background: #D5CFD1 !important;
     }
 
     .plot-label {
@@ -611,7 +611,7 @@
         position: relative !important;
         width: 100% !important;
         height: 50vh !important;
-        background-color: #f0f0f0 !important;
+        background-color: #D5CFD1 !important;
         margin-bottom: 70px !important;
     }
 
