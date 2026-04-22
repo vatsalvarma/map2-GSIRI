@@ -484,8 +484,13 @@
     .firsttop {
         display: flex !important;
         flex-direction: column !important;
-         min-height: 100vh;   /* modern iOS fix */
-    height: auto;
+        min-height: 100dvh;
+        /* modern iOS fix */
+        min-height: 100svh;
+        /* fallback */
+        min-height: -webkit-fill-available;
+        /* older iOS */
+        height: auto;
         overflow-y: auto !important;
         position: relative !important;
         width: 100vw !important;
@@ -557,7 +562,7 @@
         left: auto !important;
         top: auto !important;
         right: auto !important;
-        bottom: 20px !important;
+        bottom: 50px !important;
         margin: 40px auto 20px auto !important;
         width: 80px !important;
         height: 80px !important;
@@ -610,7 +615,7 @@
         width: 100% !important;
         height: 50vh !important;
         background-color: #D5CFD1 !important;
-        margin-bottom: 70px !important;
+        bottom: 150px !important;
     }
 
     #layout-image {
@@ -631,7 +636,8 @@
     .filter-btn,
     .view-compare-btn {
         position: relative !important;
-        bottom: 60px !important;
+        bottom: 240px !important;
+        height: 40px;
         right: auto !important;
         left: auto !important;
         width: 85% !important;
@@ -647,7 +653,8 @@
 
     .compare-btn {
         position: relative !important;
-        bottom: 50px !important;
+        bottom: 70px !important;
+        height: 40px;
         right: auto !important;
         left: auto !important;
         width: 95% !important;
