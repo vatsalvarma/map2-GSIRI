@@ -525,7 +525,7 @@
     }
 
     .panel-row {
-        margin-bottom: 15px !important;
+        margin-bottom: 10px !important;
         display: flex !important;
         align-items: center !important;
         justify-content: space-between !important;
@@ -636,7 +636,7 @@
     .filter-btn,
     .view-compare-btn {
         position: relative !important;
-        bottom: 240px !important;
+        bottom: 220px !important;
         height: 40px;
         right: auto !important;
         left: auto !important;
@@ -652,6 +652,13 @@
     }
 
     .compare-btn {
+         display: flex !important; /* ✅ better than block */
+    align-items: center;
+    justify-content: center;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
         position: relative !important;
         bottom: 70px !important;
         height: 40px;
